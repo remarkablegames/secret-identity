@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/remarkablegames/secret-identity/blob/master/public/cover.png?raw=true" alt="Secret Identity">
+</p>
+
 # Secret Identity
 
 ![release](https://img.shields.io/github/v/release/remarkablegames/secret-identity)
