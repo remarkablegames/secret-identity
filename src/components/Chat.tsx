@@ -24,7 +24,7 @@ export default function Chat() {
     initialMessages: [
       {
         role: 'assistant',
-        content: 'How may I help you?',
+        content: "I'm a superhero. Can you guess my secret identity?",
         id: '1',
       },
     ],
