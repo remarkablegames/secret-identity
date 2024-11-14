@@ -1,8 +1,15 @@
 # Secret Identity
 
+![release](https://img.shields.io/github/v/release/remarkablegames/secret-identity)
 [![build](https://github.com/remarkablegames/secret-identity/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/secret-identity/actions/workflows/build.yml)
 
-🦸 Guess my secret identity.
+🦸 <kbd>Secret Identity</kbd> is an AI chatbot game where you guess a superhero's secret identity.
+
+This game was made for [Game Off 2024](https://itch.io/jam/game-off-2024), which the theme was **SECRETS**.
+
+## Credits
+
+- Incognito by Soremba from [Noun Project](https://thenounproject.com/icon/incognito-3847037/) (CC BY 3.0)
 
 ## Install
 
