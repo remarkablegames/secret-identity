@@ -35,6 +35,6 @@ jobs:
         uses: remarkablegames/setup-butler@v1
 
       - name: Upload to itch.io
-        run: butler push public ${{ github.repository }}:html5 --userversion ${{ env.VERSION }}
+        run: butler push public ${{ github.repository }}:html5 --userversion $(jq -r .version package.json)
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
