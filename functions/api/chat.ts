@@ -21,22 +21,37 @@ const MAX_TOKENS = 100;
  * @returns - Response.
  */
 export const onRequestPost: PagesFunction<Env> = async (context) => {
-  const { messages } = await context.request.json<{
-    messages: RoleScopedChatInput[];
-  }>();
+  try {
+    const { messages } = await context.request.json<{
+      messages: RoleScopedChatInput[];
+    }>();
 
-  messages.unshift(PROMPT);
+    messages.unshift(PROMPT);
 
-  const workersai = createWorkersAI({ binding: context.env.AI });
+    const workersai = createWorkersAI({ binding: context.env.AI });
 
-  // https://sdk.vercel.ai/providers/community-providers/cloudflare-workers-ai#generatetext
-  const result = await generateText({
-    model: workersai('@cf/meta/llama-3.1-8b-instruct'),
-    maxTokens: MAX_TOKENS,
-    messages,
-  });
+    // https://sdk.vercel.ai/providers/community-providers/cloudflare-workers-ai#generatetext
+    const result = await generateText({
+      model: workersai('@cf/meta/llama-3.1-8b-instruct'),
+      maxTokens: MAX_TOKENS,
+      messages,
+    });
 
-  return new Response(result.text, getResponseInit(context));
+    return new Response(result.text, getResponseInit(context));
+  } catch (error) {
+    // InferenceUpstreamError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage.
+    if (
+      error instanceof Error &&
+      /you have used up your daily free allocation/.test(error.message)
+    ) {
+      return new Response('Daily quota exceeded.', {
+        ...getResponseInit(context),
+        status: 429,
+      });
+    } else {
+      throw error;
+    }
+  }
 };
 
 /**
