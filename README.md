@@ -16,6 +16,8 @@ Play the game on:
 - [remarkablegames](https://remarkablegames.org/secret-identity/)
 - [itch.io](https://remarkablegames.itch.io/secret-identity)
 
+Read the [blog post](https://remarkablegames.org/posts/secret-identity/).
+
 ## Credits
 
 - Incognito by Soremba from [Noun Project](https://thenounproject.com/icon/incognito-3847037/) (CC BY 3.0)
