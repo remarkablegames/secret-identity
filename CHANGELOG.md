@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/remarkablegames/secret-identity/compare/v1.0.2...v1.0.3) (2024-11-15)
+
+
+### Bug Fixes
+
+* **Form:** change input placeholder to "Type your guess..." ([bbd5691](https://github.com/remarkablegames/secret-identity/commit/bbd569154963aba4eb9fce40762d90fa5b7f36b6))
+
 ## [1.0.2](https://github.com/remarkablegames/secret-identity/compare/v1.0.1...v1.0.2) (2024-11-14)
 
 
