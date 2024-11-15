@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/remarkablegames/secret-identity/compare/v1.0.3...v1.0.4) (2024-11-15)
+
+
+### Bug Fixes
+
+* **functions:** catch and show daily quota exceeded error ([bf0d53f](https://github.com/remarkablegames/secret-identity/commit/bf0d53f313005b5637a01b5f5ba66b2dbb0e7f96))
+
 ## [1.0.3](https://github.com/remarkablegames/secret-identity/compare/v1.0.2...v1.0.3) (2024-11-15)
 
 
