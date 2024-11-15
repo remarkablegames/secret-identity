@@ -67,6 +67,20 @@ Your app is ready to be deployed!
 
 Runs ESLint.
 
+## Debug
+
+Login via Wrangler:
+
+```sh
+npx wrangler login
+```
+
+Start a logging session:
+
+```sh
+npx wrangler pages deployment tail
+```
+
 ## License
 
 [MIT](LICENSE)
