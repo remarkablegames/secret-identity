@@ -1,6 +1,7 @@
 import { useChat } from 'ai/react';
 import { API_URL, DEV } from 'src/constants';
 import { incrementGuesses, overMaxGuesses } from 'src/helpers';
+import { confirmation } from 'src/sounds';
 
 import ChatError from './ChatError';
 import Form from './Form';
@@ -31,6 +32,7 @@ export default function Chat() {
     ],
 
     onFinish() {
+      confirmation.play();
       incrementGuesses();
       if (overMaxGuesses()) {
         setTimeout(() => location.reload(), 3000);
