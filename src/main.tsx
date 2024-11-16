@@ -2,6 +2,6 @@ import './index.css';
 
 import { render } from 'preact';
 
-import Chat from './components/Chat';
+import App from './components/App';
 
-render(<Chat />, document.getElementById('root')!);
+render(<App />, document.getElementById('app')!);

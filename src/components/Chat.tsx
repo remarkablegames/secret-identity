@@ -38,7 +38,7 @@ export default function Chat() {
   });
 
   return (
-    <section class="flex h-screen flex-col rounded-xl bg-white sm:h-[70vh] sm:border sm:shadow">
+    <>
       <Header />
       <ChatError error={error} reload={reload} />
       <Messages messages={messages} />
@@ -48,6 +48,6 @@ export default function Chat() {
         onSubmit={handleSubmit}
         value={input}
       />
-    </section>
+    </>
   );
 }
