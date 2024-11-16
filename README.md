@@ -21,6 +21,7 @@ Read the [blog post](https://remarkablegames.org/posts/secret-identity/).
 ## Credits
 
 - Incognito by Soremba from [Noun Project](https://thenounproject.com/icon/incognito-3847037/) (CC BY 3.0)
+- [Kenney Interface Sounds](https://kenney.nl/assets/interface-sounds)
 
 ## Install
 
