@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/remarkablegames/secret-identity/compare/v1.0.4...v1.0.5) (2024-11-16)
+
+
+### Bug Fixes
+
+* **api:** decrease max tokens from 100 to 1 ([f07bedf](https://github.com/remarkablegames/secret-identity/commit/f07bedfefe1ee5a0a416ad3755c96814aaf0aac3))
+
 ## [1.0.4](https://github.com/remarkablegames/secret-identity/compare/v1.0.3...v1.0.4) (2024-11-15)
 
 
