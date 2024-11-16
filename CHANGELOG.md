@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/remarkablegames/secret-identity/compare/v1.0.5...v1.1.0) (2024-11-16)
+
+
+### Features
+
+* allow player maximum 5 guesses per day ([b4d8494](https://github.com/remarkablegames/secret-identity/commit/b4d8494a7f24e64b8a63b7d8e5c12f38098ee3bc))
+
 ## [1.0.5](https://github.com/remarkablegames/secret-identity/compare/v1.0.4...v1.0.5) (2024-11-16)
 
 
