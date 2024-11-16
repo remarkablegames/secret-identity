@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/remarkablegames/secret-identity/compare/v1.1.0...v1.2.0) (2024-11-16)
+
+
+### Features
+
+* **sounds:** play Chat interface sounds ([30449a0](https://github.com/remarkablegames/secret-identity/commit/30449a01302fb14009d19e386e54765f8eb0420f))
+
 ## [1.1.0](https://github.com/remarkablegames/secret-identity/compare/v1.0.5...v1.1.0) (2024-11-16)
 
 
