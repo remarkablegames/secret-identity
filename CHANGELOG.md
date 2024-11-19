@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/remarkablegames/secret-identity/compare/v1.2.0...v1.2.1) (2024-11-19)
+
+
+### Bug Fixes
+
+* **sounds:** decrease volume of sounds ([2e17a80](https://github.com/remarkablegames/secret-identity/commit/2e17a800e368f001e370366a00d9832d479ffd16))
+
 ## [1.2.0](https://github.com/remarkablegames/secret-identity/compare/v1.1.0...v1.2.0) (2024-11-16)
 
 
