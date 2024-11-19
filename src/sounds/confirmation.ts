@@ -6,4 +6,5 @@ export const confirmation = new Howl({
     '/sounds/confirmation.ogg',
     '/sounds/confirmation.mp3',
   ],
+  volume: 0.5,
 });
