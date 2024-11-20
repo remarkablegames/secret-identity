@@ -15,7 +15,7 @@
     "start": "run-p client server"
   },
   "dependencies": {
-    "ai": "4.0.0",
+    "ai": "4.0.1",
     "clsx": "2.1.1",
     "howler": "2.2.4",
     "preact": "10.24.3",
@@ -47,6 +47,6 @@
     "tailwindcss": "3.4.15",
     "typescript": "5.6.3",
     "vite": "5.4.11",
-    "wrangler": "3.87.0"
+    "wrangler": "3.88.0"
   }
 }
