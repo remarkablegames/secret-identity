@@ -1,7 +1,7 @@
 import { MAX_GUESSES } from 'src/constants';
 
 function getDate(): string {
-  return new Date().toISOString().split('T')[0];
+  return new Date().toLocaleDateString();
 }
 
 function getGuesses(): number {
