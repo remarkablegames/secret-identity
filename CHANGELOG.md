@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/remarkablegames/secret-identity/compare/v1.2.1...v1.2.2) (2024-11-20)
+
+
+### Bug Fixes
+
+* don't play tick sound on mobile ([343e864](https://github.com/remarkablegames/secret-identity/commit/343e8645f7948dcaf6dfff09b88bda97c55becb1))
+
 ## [1.2.1](https://github.com/remarkablegames/secret-identity/compare/v1.2.0...v1.2.1) (2024-11-19)
 
 
