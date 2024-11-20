@@ -35,7 +35,7 @@ export default function Chat() {
       confirmation.play();
       incrementGuesses();
       if (overMaxGuesses()) {
-        setTimeout(() => location.reload(), 3000);
+        setTimeout(() => location.reload(), 10000);
       }
     },
 

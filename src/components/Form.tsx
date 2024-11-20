@@ -1,5 +1,5 @@
 import type { UseChatHelpers } from 'ai/react';
-import { isMobile } from 'src/helpers';
+import { isMobile, overMaxGuesses } from 'src/helpers';
 import { drop, tick } from 'src/sounds';
 
 import SubmitButton from './SubmitButton';
@@ -33,7 +33,7 @@ export default function Form(props: Props) {
         value={props.value}
       />
 
-      <SubmitButton disabled={props.isLoading} />
+      <SubmitButton disabled={props.isLoading || overMaxGuesses()} />
     </form>
   );
 }
