@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.3](https://github.com/remarkablegames/secret-identity/compare/v1.2.2...v1.2.3) (2024-11-20)
+
+
+### Bug Fixes
+
+* **Form:** disable submit button if over max guesses ([f4f9f95](https://github.com/remarkablegames/secret-identity/commit/f4f9f9563ddf359b92bcbf0a00d76f20f58aabc8))
+* **helpers:** update localStorage key to use locale date string ([ae3a13a](https://github.com/remarkablegames/secret-identity/commit/ae3a13a85fa7c17d101680fa9e194a074d5683ad))
+
 ## [1.2.2](https://github.com/remarkablegames/secret-identity/compare/v1.2.1...v1.2.2) (2024-11-20)
 
 
