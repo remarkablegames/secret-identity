@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/remarkablegames/secret-identity/compare/v1.2.3...v1.3.0) (2024-11-22)
+
+
+### Features
+
+* **constants:** increase MAX_GUESSES from 5 to 6 ([2e901f4](https://github.com/remarkablegames/secret-identity/commit/2e901f4460b0d8356bdd03a6a526ff149e21439f))
+
 ## [1.2.3](https://github.com/remarkablegames/secret-identity/compare/v1.2.2...v1.2.3) (2024-11-20)
 
 
