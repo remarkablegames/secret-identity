@@ -17,3 +17,10 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
+/**
+ * GitHub Corners: https://github.com/remarkablemark/github-corners
+ */
+.github-corner > svg {
+  @apply hidden opacity-60 duration-400 hover:opacity-100 sm:block;
+}
