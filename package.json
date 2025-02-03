@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
+    "clean": "rm -rf .wrangler dist",
     "client": "vite --open",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
