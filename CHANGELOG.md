@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.1](https://github.com/remarkablegames/secret-identity/compare/v1.4.0...v1.4.1) (2025-02-11)
+
+
+### Bug Fixes
+
+* **index:** fix favicon path ([2499c1f](https://github.com/remarkablegames/secret-identity/commit/2499c1fde74ced440ef4169b9d44025585c73508))
+* **index:** prepend BASE_URL in favicon path ([457a157](https://github.com/remarkablegames/secret-identity/commit/457a15726daeacc1e4a6e835edb4d5af79016cd4))
+* **public:** fix favicon url ([d45d467](https://github.com/remarkablegames/secret-identity/commit/d45d467c6b673bcdc25886f9fa843f02b2361f96))
+
 ## [1.4.0](https://github.com/remarkablegames/secret-identity/compare/v1.3.0...v1.4.0) (2024-11-28)
 
 
