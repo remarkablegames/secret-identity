@@ -19,7 +19,7 @@
     "ai": "4.1.46",
     "clsx": "2.1.1",
     "howler": "2.2.4",
-    "preact": "10.26.2",
+    "preact": "10.26.3",
     "workers-ai-provider": "0.1.1"
   },
   "devDependencies": {
