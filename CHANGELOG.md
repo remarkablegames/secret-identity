@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/remarkablegames/secret-identity/compare/v1.4.1...v1.4.2) (2025-05-03)
+
+
+### Bug Fixes
+
+* **api:** increase MAX_TOKENS to 150 ([36ca4b0](https://github.com/remarkablegames/secret-identity/commit/36ca4b041de2d08ab135ea3495a17b451c0f179f))
+
 ## [1.4.1](https://github.com/remarkablegames/secret-identity/compare/v1.4.0...v1.4.1) (2025-02-11)
 
 
