@@ -20,7 +20,7 @@
     "clsx": "2.1.1",
     "howler": "2.2.4",
     "preact": "10.26.8",
-    "workers-ai-provider": "0.5.3"
+    "workers-ai-provider": "0.6.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20250603.0",
