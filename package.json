@@ -16,7 +16,7 @@
     "start": "run-p client server"
   },
   "dependencies": {
-    "ai": "4.3.16",
+    "ai": "4.3.17",
     "clsx": "2.1.1",
     "howler": "2.2.4",
     "preact": "10.26.9",
