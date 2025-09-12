@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.4](https://github.com/remarkablegames/secret-identity/compare/v1.4.3...v1.4.4) (2025-09-12)
+
+
+### Performance Improvements
+
+* **api:** replace model with `llama-3.1-8b-instruct-fast` ([4780e8d](https://github.com/remarkablegames/secret-identity/commit/4780e8d45a8a6fe6072560cedd5afa3e580617c8))
+
 ## [1.4.3](https://github.com/remarkablegames/secret-identity/compare/v1.4.2...v1.4.3) (2025-09-10)
 
 ### Miscellaneous Chores
