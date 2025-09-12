@@ -32,7 +32,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     // https://sdk.vercel.ai/providers/community-providers/cloudflare-workers-ai#generatetext
     const result = await generateText({
-      model: workersai('@cf/meta/llama-3.1-8b-instruct'),
+      model: workersai('@cf/meta/llama-3.1-8b-instruct-fast'),
       maxTokens: MAX_TOKENS,
       messages,
     });
