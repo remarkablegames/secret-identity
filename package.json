@@ -16,7 +16,7 @@
     "start": "run-p client server"
   },
   "dependencies": {
-    "ai": "4.3.19",
+    "ai": "5.0.76",
     "clsx": "2.1.1",
     "howler": "2.2.4",
     "preact": "10.27.2",
@@ -47,7 +47,7 @@
     "prettier-plugin-tailwindcss": "0.7.1",
     "tailwindcss": "4.1.14",
     "typescript": "5.9.3",
-    "vite": "7.1.10",
+    "vite": "7.1.11",
     "wrangler": "4.43.0"
   }
 }
