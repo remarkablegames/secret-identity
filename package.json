@@ -32,8 +32,8 @@
     "@preact/preset-vite": "2.10.3",
     "@tailwindcss/postcss": "4.1.18",
     "@types/howler": "2.2.12",
-    "@typescript-eslint/eslint-plugin": "8.56.1",
-    "@typescript-eslint/parser": "8.56.1",
+    "@typescript-eslint/eslint-plugin": "8.64.0",
+    "@typescript-eslint/parser": "8.64.0",
     "eslint": "10.5.0",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-simple-import-sort": "12.1.1",
@@ -46,7 +46,7 @@
     "prettier": "3.8.3",
     "prettier-plugin-tailwindcss": "0.7.2",
     "tailwindcss": "4.1.18",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "vite": "7.3.2",
     "wrangler": "4.68.1"
   }
