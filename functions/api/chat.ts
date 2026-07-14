@@ -9,7 +9,7 @@ interface Env {
 const PROMPT: CoreMessage = {
   role: 'system',
   content:
-    "You are a superhero and the player can ask up to 5 questions to guess your secret identity. You can offer clues as long as you don't reveal who you are. If the player guesses your secret identity, then the player wins. If the player does not guess your secret identity, then the player loses. At the end of the game, you reveal who are you are.",
+    "You're a superhero and the player can ask up to 5 questions to guess your secret identity. You can offer clues as long as you don't reveal who you are. If the player guesses your secret identity, then the player wins. If the player does not guess your secret identity, then the player loses. At the end of the game, you reveal who you are.",
 };
 
 const MAX_TOKENS = 150;
@@ -32,7 +32,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     // https://sdk.vercel.ai/providers/community-providers/cloudflare-workers-ai#generatetext
     const result = await generateText({
-      model: workersai('@cf/meta/llama-3.1-8b-instruct-fast'),
+      model: workersai('@cf/meta/llama-3.1-8b-instruct-fp8'),
       maxTokens: MAX_TOKENS,
       messages,
     });
@@ -81,4 +81,5 @@ function getResponseInit(
       },
     };
   }
+  return {};
 }
