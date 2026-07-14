@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.6](https://github.com/remarkablegames/secret-identity/compare/v1.4.5...v1.4.6) (2026-07-14)
+
+
+### Bug Fixes
+
+* **api:** improve chat prompt and reduce hallucination ([15ad1d7](https://github.com/remarkablegames/secret-identity/commit/15ad1d7098d1fc745d77a424374db5a6a4ec4e00))
+
 ## [1.4.5](https://github.com/remarkablegames/secret-identity/compare/v1.4.4...v1.4.5) (2026-07-14)
 
 
