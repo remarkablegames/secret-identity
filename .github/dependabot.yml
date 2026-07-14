@@ -15,15 +15,12 @@ updates:
           - '@commitlint/*'
       eslint:
         patterns:
-          - '@eslint/*'
-          - eslint
-      prettier:
-        patterns:
+          - '*eslint*'
           - prettier
-          - eslint-plugin-prettier
-      typescript-eslint:
+      wrangler:
         patterns:
-          - '@typescript-eslint/*'
+          - '@cloudflare/workers-types'
+          - wrangler
 
   - package-ecosystem: 'github-actions'
     directory: '/'
