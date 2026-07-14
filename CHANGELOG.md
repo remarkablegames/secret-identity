@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.5](https://github.com/remarkablegames/secret-identity/compare/v1.4.4...v1.4.5) (2026-07-14)
+
+
+### Bug Fixes
+
+* **api:** change the model to `@cf/meta/llama-3.1-8b-instruct-fp8` ([7a233d3](https://github.com/remarkablegames/secret-identity/commit/7a233d3606a7c0b5410b4f4e710591aebbbdbbc5))
+
 ## [1.4.4](https://github.com/remarkablegames/secret-identity/compare/v1.4.3...v1.4.4) (2025-09-12)
 
 
