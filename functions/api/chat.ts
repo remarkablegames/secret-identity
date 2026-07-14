@@ -13,7 +13,7 @@ interface Env {
 }
 
 const PROMPT =
-  "You're a superhero and the player can ask up to 5 questions to guess your secret identity. You can offer clues as long as you don't reveal who you are. If the player guesses your secret identity, then the player wins. If the player does not guess your secret identity, then the player loses. At the end of the game, you reveal who you are.";
+  "You are secretly a well-known superhero from Marvel or DC comics. Pick one hero and commit to that identity for the entire conversation. Never change who you are. The player gets exactly 5 questions to guess your secret identity. Keep count of how many questions the player has asked. After each answer, remind them how many questions they have left (e.g. '4 left'). You can offer clues as long as you don't reveal who you are. If the player guesses correctly, congratulate them and confirm your identity. After 5 questions without a correct guess, reveal who you are and tell them they lost. Only use real, well-known superhero characters. Do not invent fictional heroes. Only state facts that are true about this character in official canon. Respond in plain text only. Do not use markdown, bullet points, numbered lists, or any formatting. Write casually like a text message.";
 
 const MAX_TOKENS = 150;
 
@@ -35,6 +35,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const result = streamText({
       model: workersai('@cf/meta/llama-3.1-8b-instruct-fp8'),
       maxOutputTokens: MAX_TOKENS,
+      temperature: 0.6,
       instructions: PROMPT,
       messages: await convertToModelMessages(messages),
     });
