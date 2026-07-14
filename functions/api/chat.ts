@@ -1,4 +1,10 @@
-import { type CoreMessage, generateText } from 'ai';
+import {
+  convertToModelMessages,
+  createUIMessageStreamResponse,
+  streamText,
+  toUIMessageStream,
+  type UIMessage,
+} from 'ai';
 import { createWorkersAI } from 'workers-ai-provider';
 
 interface Env {
@@ -6,11 +12,8 @@ interface Env {
   NODE_ENV: 'development' | 'preview' | 'production';
 }
 
-const PROMPT: CoreMessage = {
-  role: 'system',
-  content:
-    "You're a superhero and the player can ask up to 5 questions to guess your secret identity. You can offer clues as long as you don't reveal who you are. If the player guesses your secret identity, then the player wins. If the player does not guess your secret identity, then the player loses. At the end of the game, you reveal who you are.",
-};
+const PROMPT =
+  "You're a superhero and the player can ask up to 5 questions to guess your secret identity. You can offer clues as long as you don't reveal who you are. If the player guesses your secret identity, then the player wins. If the player does not guess your secret identity, then the player loses. At the end of the game, you reveal who you are.";
 
 const MAX_TOKENS = 150;
 
@@ -23,21 +26,23 @@ const MAX_TOKENS = 150;
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   try {
     const { messages } = await context.request.json<{
-      messages: CoreMessage[];
+      messages: UIMessage[];
     }>();
-
-    messages.unshift(PROMPT);
 
     const workersai = createWorkersAI({ binding: context.env.AI });
 
-    // https://sdk.vercel.ai/providers/community-providers/cloudflare-workers-ai#generatetext
-    const result = await generateText({
+    // https://sdk.vercel.ai/providers/community-providers/cloudflare-workers-ai#streamtext
+    const result = streamText({
       model: workersai('@cf/meta/llama-3.1-8b-instruct-fp8'),
-      maxTokens: MAX_TOKENS,
-      messages,
+      maxOutputTokens: MAX_TOKENS,
+      instructions: PROMPT,
+      messages: await convertToModelMessages(messages),
     });
 
-    return new Response(result.text, getResponseInit(context));
+    return createUIMessageStreamResponse({
+      stream: toUIMessageStream({ stream: result.stream }),
+      ...getResponseInit(context),
+    });
   } catch (error) {
     // InferenceUpstreamError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage.
     if (

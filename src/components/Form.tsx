@@ -1,4 +1,3 @@
-import type { UseChatHelpers } from 'ai/react';
 import { isMobile, overMaxGuesses } from 'src/helpers';
 import { drop, tick } from 'src/sounds';
 
@@ -6,8 +5,8 @@ import SubmitButton from './SubmitButton';
 
 interface Props {
   isLoading: boolean;
-  onChange: UseChatHelpers['handleInputChange'];
-  onSubmit: UseChatHelpers['handleSubmit'];
+  onChange: (event: Event) => void;
+  onSubmit: (event: Event) => void;
   value: string;
 }
 
