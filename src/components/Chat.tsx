@@ -1,4 +1,6 @@
-import { useChat } from 'ai/react';
+import { type UIMessage, useChat } from '@ai-sdk/react';
+import { DefaultChatTransport } from 'ai';
+import { useState } from 'preact/hooks';
 import { API_URL, DEV } from 'src/constants';
 import { incrementGuesses, overMaxGuesses } from 'src/helpers';
 import { confirmation } from 'src/sounds';
@@ -8,28 +10,24 @@ import Form from './Form';
 import Header from './Header';
 import Messages from './Messages';
 
-export default function Chat() {
-  // https://sdk.vercel.ai/docs/ai-sdk-ui/chatbot
-  // https://sdk.vercel.ai/docs/reference/ai-sdk-ui/use-chat
-  const {
-    error,
-    handleInputChange,
-    handleSubmit,
-    input,
-    isLoading,
-    messages,
-    reload,
-  } = useChat({
-    api: `${API_URL}/api/chat`,
-    streamProtocol: 'text',
+const INITIAL_MESSAGE: UIMessage = {
+  id: '1',
+  role: 'assistant',
+  parts: [
+    {
+      type: 'text',
+      text: "I'm a superhero. Can you guess my secret identity?",
+    },
+  ],
+};
 
-    initialMessages: [
-      {
-        role: 'assistant',
-        content: "I'm a superhero. Can you guess my secret identity?",
-        id: '1',
-      },
-    ],
+export default function Chat() {
+  const [input, setInput] = useState('');
+  const { error, messages, regenerate, sendMessage, status } = useChat({
+    transport: new DefaultChatTransport({
+      api: `${API_URL}/api/chat`,
+    }),
+    messages: [INITIAL_MESSAGE],
 
     onFinish() {
       confirmation.play();
@@ -39,7 +37,7 @@ export default function Chat() {
       }
     },
 
-    onError(error) {
+    onError(error: Error) {
       if (DEV) {
         // eslint-disable-next-line no-console
         console.error(error);
@@ -47,14 +45,27 @@ export default function Chat() {
     },
   });
 
+  const isLoading = status === 'submitted' || status === 'streaming';
+
+  const handleSubmit = (event: Event) => {
+    event.preventDefault();
+    if (!input.trim() || isLoading) {
+      return;
+    }
+    sendMessage({ text: input });
+    setInput('');
+  };
+
   return (
     <>
       <Header />
-      <ChatError error={error} reload={reload} />
+      <ChatError error={error} reload={regenerate} />
       <Messages messages={messages} />
       <Form
         isLoading={isLoading}
-        onChange={handleInputChange}
+        onChange={(event: Event) =>
+          setInput((event.currentTarget as HTMLInputElement).value)
+        }
         onSubmit={handleSubmit}
         value={input}
       />
