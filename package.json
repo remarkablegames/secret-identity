@@ -25,7 +25,7 @@
     "zod": "4.4.3"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "5.20260715.1",
+    "@cloudflare/workers-types": "5.20260716.1",
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-conventional": "21.2.0",
     "@eslint/compat": "2.1.0",
@@ -50,7 +50,7 @@
     "tailwindcss": "4.3.2",
     "typescript": "6.0.3",
     "vite": "8.1.4",
-    "wrangler": "4.110.0"
+    "wrangler": "4.111.0"
   },
   "overrides": {
     "workers-ai-provider": {
