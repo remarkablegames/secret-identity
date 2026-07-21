@@ -16,7 +16,7 @@
     "start": "run-p client server"
   },
   "dependencies": {
-    "@ai-sdk/react": "4.0.33",
+    "@ai-sdk/react": "4.0.35",
     "ai": "7.0.31",
     "clsx": "2.1.1",
     "howler": "2.2.4",
