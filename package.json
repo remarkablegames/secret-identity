@@ -21,7 +21,7 @@
     "clsx": "2.1.1",
     "howler": "2.2.4",
     "preact": "10.29.7",
-    "workers-ai-provider": "3.3.1",
+    "workers-ai-provider": "4.0.0",
     "zod": "4.4.3"
   },
   "devDependencies": {
